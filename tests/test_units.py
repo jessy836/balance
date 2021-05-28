@@ -11,5 +11,6 @@ def test_mass():
 	assert mass1000g.g == 1000
 	assert mass1000g.kg == 1
 	mass1pound = Mass()
-	mass1pound.pound=1
+	mass1pound.imperial_pound=1
+	assert mass1pound.imperial_pound == 1.0
 	assert mass1pound.kg == 0.45359237
