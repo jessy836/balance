@@ -1,10 +1,10 @@
 """Testing the module wich manage units"""
 
-from balance.units import Mass, Volume
-#wich should support:
-#for each units, it should support subd
+#should support:
 #masse: g, kg, pound
-#volume: l, m**3,
+#volume: ml, l, m**3,
+
+from balance.units import Mass, Volume
 
 def test_mass():
 	mass1000g = Mass(1000)
