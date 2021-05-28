@@ -8,7 +8,7 @@ from balance.units import Mass, Volume
 
 def test_mass():
 	mass1000g = Mass(1000)
-	assert masse1000g.g == 1000
+	assert mass1000g.g == 1000
 	assert mass1000g.kg == 1
 	mass1pound = Mass()
 	mass1pound.pound=1
