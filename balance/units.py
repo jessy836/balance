@@ -6,7 +6,7 @@ class Mass:
 
     def __init__(self, g=0):
         """initialize a Mass object default to 0 g"""
-        self._g = g
+        self._g = float(g)
 
     @property
     def g(self):
@@ -16,7 +16,7 @@ class Mass:
     @g.setter
     def g(self, g):
         """set the value of mass by g"""
-        self._g = g
+        self._g = float(g)
 
     @property
     def kg(self):
