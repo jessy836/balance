@@ -42,4 +42,36 @@ class Mass:
 class Volume:
     """object representing a volume in several units"""
 
-    pass
+    def __init__(self, ml=0.0):
+        """initialized a Volume object default to 0.0 ml"""
+        self._ml = float(ml)
+
+    @property
+    def ml(self):
+        """return the value of volume in ml """
+        return self._ml
+
+    @ml.setter
+    def ml(self, ml):
+        """set the volume in ml """
+        self._ml = float(ml)
+
+    @property
+    def l(self):
+        """Return the value of volume in l"""
+        return self.ml / 1000
+
+    @l.setter
+    def l(self, l):
+        """set the value of volume with  l"""
+        self.ml = l * 1000
+
+    @property
+    def m3(self):
+        """return the value of volume in m3"""
+        return self.l / 1000
+
+    @m3.setter
+    def m3(self, m3):
+        """set the value of volume with m3"""
+        self.l = float(m3) * 1000
