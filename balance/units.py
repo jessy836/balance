@@ -4,74 +4,74 @@
 class Mass:
     """Object representing a Mass in different units"""
 
-    def __init__(self, g=0):
+    def __init__(self, gram=0):
         """initialize a Mass object default to 0 g"""
-        self._g = float(g)
+        self._gram = float(gram)
 
     @property
-    def g(self):
+    def gram(self):
         """return mass in g"""
-        return self._g
+        return self._gram
 
-    @g.setter
-    def g(self, g):
+    @gram.setter
+    def gram(self, gram):
         """set the value of mass by g"""
-        self._g = float(g)
+        self._gram = float(gram)
 
     @property
-    def kg(self):
+    def kilogram(self):
         """return mass in kg"""
-        return self._g / 1000
+        return self._gram / 1000
 
-    @kg.setter
-    def kg(self, kg):
+    @kilogram.setter
+    def kilogram(self, kilogram):
         """set the mass with  kg"""
-        self._g = kg * 1000
+        self._gram = kilogram * 1000
 
     @property
     def imperial_pound(self):
         """return mass in imperial pound"""
-        return self.kg / 0.45359237
+        return self.kilogram / 0.45359237
 
     @imperial_pound.setter
     def imperial_pound(self, pound):
         """set the mass with imperial_pound"""
-        self.kg = pound * 0.45359237
+        self.kilogram = pound * 0.45359237
 
 
 class Volume:
     """object representing a volume in several units"""
 
-    def __init__(self, ml=0.0):
+    def __init__(self, milliliter=0.0):
         """initialized a Volume object default to 0.0 ml"""
-        self._ml = float(ml)
+        self._milliliter = float(milliliter)
 
     @property
-    def ml(self):
+    def milliliter(self):
         """return the value of volume in ml """
-        return self._ml
+        return self._milliliter
 
-    @ml.setter
-    def ml(self, ml):
+    @milliliter.setter
+    def milliliter(self, milliliter):
         """set the volume in ml """
-        self._ml = float(ml)
+        self._milliliter = float(milliliter)
 
     @property
-    def l(self):
+    def liter(self):
         """Return the value of volume in l"""
-        return self.ml / 1000
+        return self.milliliter / 1000
 
-    @l.setter
-    def l(self, l):
+    @liter.setter
+    def liter(self, liter):
         """set the value of volume with  l"""
-        self.ml = l * 1000
+        self.milliliter = liter * 1000
 
     @property
-    def m3(self):
+    def cubic_meter(self):
         """return the value of volume in m3"""
-        return self.l / 1000
+        return self.liter / 1000
 
-    @m3.setter
-    def m3(self, m3):
+    @cubic_meter.setter
+    def cubic_meter(self, cubic_meter):
         """set the value of volume with m3"""
-        self.l = float(m3) * 1000
+        self.liter = float(cubic_meter) * 1000
